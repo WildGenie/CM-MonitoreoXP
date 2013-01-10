@@ -1,0 +1,6 @@
+#Proyecto Sucursal Audio
+	Requerimientos:
+	- Instalar un dispositivo de audio bluetooth.
+
+	Version 1.0
+		- Se instala unicamente como servicio de windows, le hace falta crear un icono en la barra de tareas.
