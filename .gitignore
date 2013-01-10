@@ -136,6 +136,9 @@ NAudio-Source/*
 SucursalAudioW/*
 VoiceRecorder/*
 
+#Specific archives
+*.exe
+
 #############
 ## Python
 #############

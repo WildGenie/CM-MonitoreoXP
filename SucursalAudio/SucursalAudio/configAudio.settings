@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SucursalAudio" GeneratedClassName="configAudio">
+  <Profiles />
+  <Settings>
+    <Setting Name="ftp_usarPasivo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ftp_usuario" Type="System.String" Scope="User">
+      <Value Profile="(Default)">elisa</Value>
+    </Setting>
+    <Setting Name="ftp_pass" Type="System.String" Scope="User">
+      <Value Profile="(Default)">elisahome</Value>
+    </Setting>
+    <Setting Name="ip_local" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.10.25</Value>
+    </Setting>
+    <Setting Name="ftp_direccion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pruebaelisa.laboratorioschontalpa.com.mx</Value>
+    </Setting>
+    <Setting Name="ip_remota" Type="System.String" Scope="User">
+      <Value Profile="(Default)">187.157.4.94</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02160EC4-37A7-491C-919D-9F25B2F99CA1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SucursalAudio</RootNamespace>
+    <AssemblyName>SucursalAudio</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>bin\Debug\gears_run.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LumiSoft.Net, Version=2.0.2771.36169, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\LumiSoft\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NAudio-Release\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NAudio-Release\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\administrador.Designer.cs">
+      <DependentUpon>administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configAudio.cs" />
+    <Compile Include="logger\Logger.cs" />
+    <Compile Include="Media\Wave\native\MMSYSERR.cs" />
+    <Compile Include="Media\Wave\native\WavConstants.cs" />
+    <Compile Include="Media\Wave\native\WAVEFORMATEX.cs" />
+    <Compile Include="Media\Wave\native\WAVEHDR.cs" />
+    <Compile Include="Media\Wave\native\WAVEOUTCAPS.cs" />
+    <Compile Include="Media\Wave\native\WavFormat.cs" />
+    <Compile Include="Media\Wave\native\WavMethods.cs" />
+    <Compile Include="Media\Wave\WaveIn.cs" />
+    <Compile Include="Media\Wave\WaveOut.cs" />
+    <Compile Include="Media\Wave\WavInDevice.cs" />
+    <Compile Include="Media\Wave\WavOutDevice.cs" />
+    <Compile Include="ProyectoInstalador.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProyectoInstalador.Designer.cs">
+      <DependentUpon>ProyectoInstalador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Servicio.Designer.cs">
+      <DependentUpon>Servicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="configAudio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>configAudio.settings</DependentUpon>
+    </Compile>
+    <Compile Include="utilidades\capturaAudio.cs" />
+    <Compile Include="utilidades\FtpAudio.cs" />
+    <Compile Include="utilidades\Streaming.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="admin\administrador.resx">
+      <DependentUpon>administrador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProyectoInstalador.resx">
+      <DependentUpon>ProyectoInstalador.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicio.resx">
+      <DependentUpon>Servicio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="bin\Debug\gears_run.ico" />
+    <None Include="configAudio.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>configAudio.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

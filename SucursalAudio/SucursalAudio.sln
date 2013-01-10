@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SucursalAudio", "SucursalAudio\SucursalAudio.csproj", "{02160EC4-37A7-491C-919D-9F25B2F99CA1}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SucursalAudioCliente", "InstaladorSucursalAudio\InstaladorSucursalAudio.vdproj", "{E0EC3EC9-10CE-4DFA-8DAE-EE9FD6B15B48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8A87A081-787E-4794-834E-6B2C3C560209}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02160EC4-37A7-491C-919D-9F25B2F99CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02160EC4-37A7-491C-919D-9F25B2F99CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02160EC4-37A7-491C-919D-9F25B2F99CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02160EC4-37A7-491C-919D-9F25B2F99CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0EC3EC9-10CE-4DFA-8DAE-EE9FD6B15B48}.Debug|Any CPU.ActiveCfg = Debug
+		{E0EC3EC9-10CE-4DFA-8DAE-EE9FD6B15B48}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
