@@ -126,6 +126,15 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+#Specific Folders
+*.svn
+.svn/*
+AdvancedWave/*
+ClienteBluetooth/*
+Monitor/*
+NAudio-Source/*
+SucursalAudioW/*
+VoiceRecorder/*
 
 #############
 ## Python
