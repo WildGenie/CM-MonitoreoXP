@@ -6,19 +6,16 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="ftp_usuario" Type="System.String" Scope="User">
-      <Value Profile="(Default)">elisa</Value>
+      <Value Profile="(Default)">-----</Value>
     </Setting>
     <Setting Name="ftp_pass" Type="System.String" Scope="User">
-      <Value Profile="(Default)">elisahome</Value>
-    </Setting>
-    <Setting Name="ip_local" Type="System.String" Scope="User">
-      <Value Profile="(Default)">192.168.10.25</Value>
+      <Value Profile="(Default)">-----</Value>
     </Setting>
     <Setting Name="ftp_direccion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">pruebaelisa.laboratorioschontalpa.com.mx</Value>
+      <Value Profile="(Default)">10.0.0.1</Value>
     </Setting>
     <Setting Name="ip_remota" Type="System.String" Scope="User">
-      <Value Profile="(Default)">187.157.4.94</Value>
+      <Value Profile="(Default)">100.100.100.100</Value>
     </Setting>
   </Settings>
 </SettingsFile>
