@@ -22,5 +22,17 @@ namespace AdminAudioVideo.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.8.35)" +
+            "(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=labcho.laboratoriosch" +
+            "ontalpa.com.mx)));User Id=elisa;Password=elisaprueba;")]
+        public string connOracle {
+            get {
+                return ((string)(this["connOracle"]));
+            }
+        }
     }
 }

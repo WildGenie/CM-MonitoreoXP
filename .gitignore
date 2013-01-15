@@ -135,6 +135,9 @@ Monitor/*
 NAudio-Source/*
 SucursalAudioW/*
 VoiceRecorder/*
+BibliotecaEjemplo/*
+ButtonArrayProject/*
+
 
 #Specific archives
 *.exe
