@@ -6,16 +6,19 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="ftp_usuario" Type="System.String" Scope="User">
-      <Value Profile="(Default)">-----</Value>
+      <Value Profile="(Default)">---</Value>
     </Setting>
     <Setting Name="ftp_pass" Type="System.String" Scope="User">
-      <Value Profile="(Default)">-----</Value>
+      <Value Profile="(Default)">---</Value>
+    </Setting>
+    <Setting Name="ip_local" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.10.25</Value>
     </Setting>
     <Setting Name="ftp_direccion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">10.0.0.1</Value>
+      <Value Profile="(Default)">---</Value>
     </Setting>
     <Setting Name="ip_remota" Type="System.String" Scope="User">
-      <Value Profile="(Default)">100.100.100.100</Value>
+      <Value Profile="(Default)">192.168.10.25</Value>
     </Setting>
   </Settings>
 </SettingsFile>

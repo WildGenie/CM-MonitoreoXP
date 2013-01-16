@@ -37,7 +37,7 @@ namespace SucursalAudio {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("elisa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("---")]
         public string ftp_usuario {
             get {
                 return ((string)(this["ftp_usuario"]));
@@ -49,7 +49,7 @@ namespace SucursalAudio {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("elisahome")]
+        [global::System.Configuration.DefaultSettingValueAttribute("---")]
         public string ftp_pass {
             get {
                 return ((string)(this["ftp_pass"]));
@@ -73,7 +73,7 @@ namespace SucursalAudio {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("pruebaelisa.laboratorioschontalpa.com.mx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("---")]
         public string ftp_direccion {
             get {
                 return ((string)(this["ftp_direccion"]));
@@ -85,7 +85,7 @@ namespace SucursalAudio {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("187.157.4.94")]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.10.25")]
         public string ip_remota {
             get {
                 return ((string)(this["ip_remota"]));
