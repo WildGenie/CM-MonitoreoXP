@@ -70,6 +70,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Monitor\Monitor\lib\AForge-2.2.4\AForge.Video.dll</HintPath>
     </Reference>
+    <Reference Include="LumiSoft.Net, Version=2.0.2771.36169, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\LumiSoft\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NAudio-Release\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\NAudio-Release\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=2.112.1.2, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\oracle\product\11.2.0\client_1\odp.net\bin\2.x\Oracle.DataAccess.dll</HintPath>
@@ -88,7 +100,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="componentes\ArregloControl.cs" />
+    <Compile Include="CapaAccesoDatos\MetodosDatos.cs" />
+    <Compile Include="CapaAccesoDatos\Sucursal.cs" />
+    <Compile Include="Componentes\ArregloControl.cs" />
     <Compile Include="CapaPresentacion\PanelDetalles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +115,18 @@
     <Compile Include="CapaPresentacion\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\Media\Wave\native\MMSYSERR.cs" />
+    <Compile Include="Componentes\Media\Wave\native\WavConstants.cs" />
+    <Compile Include="Componentes\Media\Wave\native\WAVEFORMATEX.cs" />
+    <Compile Include="Componentes\Media\Wave\native\WAVEHDR.cs" />
+    <Compile Include="Componentes\Media\Wave\native\WAVEOUTCAPS.cs" />
+    <Compile Include="Componentes\Media\Wave\native\WavFormat.cs" />
+    <Compile Include="Componentes\Media\Wave\native\WavMethods.cs" />
+    <Compile Include="Componentes\Media\Wave\WaveIn.cs" />
+    <Compile Include="Componentes\Media\Wave\WaveOut.cs" />
+    <Compile Include="Componentes\Media\Wave\WavInDevice.cs" />
+    <Compile Include="Componentes\Media\Wave\WavOutDevice.cs" />
+    <Compile Include="Componentes\Streaming.cs" />
     <Compile Include="Inicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CapaPresentacion\PanelDetalles.resx">
@@ -172,9 +198,6 @@
     <None Include="icons\left.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="icons\rigth.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="icons\up.png" />
   </ItemGroup>
   <ItemGroup>
@@ -184,7 +207,6 @@
     <None Include="icons\right.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CapaAccesoDatos\" />
     <Folder Include="CapaNegocios\" />
     <Folder Include="lib\" />
   </ItemGroup>

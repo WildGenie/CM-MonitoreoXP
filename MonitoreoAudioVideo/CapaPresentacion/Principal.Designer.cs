@@ -32,9 +32,6 @@
             this.mnuItemArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.spCont = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.mnuPrincipal.SuspendLayout();
-            this.spCont.Panel1.SuspendLayout();
             this.spCont.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +69,6 @@
             // spCont.Panel1
             // 
             this.spCont.Panel1.AutoScroll = true;
-            this.spCont.Panel1.Controls.Add(this.button1);
             // 
             // spCont.Panel2
             // 
@@ -80,16 +76,6 @@
             this.spCont.Size = new System.Drawing.Size(1193, 876);
             this.spCont.SplitterDistance = 435;
             this.spCont.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(622, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Principal
             // 
@@ -103,9 +89,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Monitor de audio y video en sucursales";
             this.Load += new System.EventHandler(this.Principal_Load);
-            this.mnuPrincipal.ResumeLayout(false);
-            this.mnuPrincipal.PerformLayout();
-            this.spCont.Panel1.ResumeLayout(false);
             this.spCont.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -118,7 +101,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemArchivo;
         private System.Windows.Forms.ToolStripMenuItem mnuItemSalir;
         private System.Windows.Forms.SplitContainer spCont;
-        private System.Windows.Forms.Button button1;
     }
 }
 

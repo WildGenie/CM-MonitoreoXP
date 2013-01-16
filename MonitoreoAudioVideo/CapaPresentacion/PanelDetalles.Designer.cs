@@ -30,16 +30,19 @@
         {
             this.btnCerrar = new System.Windows.Forms.Button();
             this.ctrlVideo = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnright = new System.Windows.Forms.Button();
-            this.ctrlAudio = new System.Windows.Forms.Panel();
+            this.videoSourcePlayer1 = new AForge.Controls.VideoSourcePlayer();
             this.btnUp = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
+            this.btnright = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
+            this.ctrlAudio = new System.Windows.Forms.Panel();
             this.lblVideo = new System.Windows.Forms.Label();
             this.lblAudio = new System.Windows.Forms.Label();
-            this.videoSourcePlayer1 = new AForge.Controls.VideoSourcePlayer();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
             this.ctrlVideo.SuspendLayout();
+            this.ctrlAudio.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -66,33 +69,14 @@
             this.ctrlVideo.Size = new System.Drawing.Size(353, 211);
             this.ctrlVideo.TabIndex = 6;
             // 
-            // btnHome
+            // videoSourcePlayer1
             // 
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Image = global::AdminAudioVideo.Properties.Resources.home;
-            this.btnHome.Location = new System.Drawing.Point(280, 140);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(27, 27);
-            this.btnHome.TabIndex = 10;
-            this.btnHome.UseVisualStyleBackColor = true;
-            // 
-            // btnright
-            // 
-            this.btnright.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnright.Image = global::AdminAudioVideo.Properties.Resources.right;
-            this.btnright.Location = new System.Drawing.Point(313, 140);
-            this.btnright.Name = "btnright";
-            this.btnright.Size = new System.Drawing.Size(27, 27);
-            this.btnright.TabIndex = 8;
-            this.btnright.UseVisualStyleBackColor = true;
-            // 
-            // ctrlAudio
-            // 
-            this.ctrlAudio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ctrlAudio.Location = new System.Drawing.Point(19, 246);
-            this.ctrlAudio.Name = "ctrlAudio";
-            this.ctrlAudio.Size = new System.Drawing.Size(353, 74);
-            this.ctrlAudio.TabIndex = 7;
+            this.videoSourcePlayer1.Location = new System.Drawing.Point(8, 5);
+            this.videoSourcePlayer1.Name = "videoSourcePlayer1";
+            this.videoSourcePlayer1.Size = new System.Drawing.Size(232, 195);
+            this.videoSourcePlayer1.TabIndex = 11;
+            this.videoSourcePlayer1.Text = "videoSourcePlayer1";
+            this.videoSourcePlayer1.VideoSource = null;
             // 
             // btnUp
             // 
@@ -104,6 +88,16 @@
             this.btnUp.Size = new System.Drawing.Size(27, 27);
             this.btnUp.TabIndex = 6;
             this.btnUp.UseVisualStyleBackColor = true;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = global::AdminAudioVideo.Properties.Resources.home;
+            this.btnHome.Location = new System.Drawing.Point(280, 140);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(27, 27);
+            this.btnHome.TabIndex = 10;
+            this.btnHome.UseVisualStyleBackColor = true;
             // 
             // btnLeft
             // 
@@ -117,6 +111,16 @@
             this.btnLeft.TabIndex = 9;
             this.btnLeft.UseVisualStyleBackColor = true;
             // 
+            // btnright
+            // 
+            this.btnright.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnright.Image = global::AdminAudioVideo.Properties.Resources.right;
+            this.btnright.Location = new System.Drawing.Point(313, 140);
+            this.btnright.Name = "btnright";
+            this.btnright.Size = new System.Drawing.Size(27, 27);
+            this.btnright.TabIndex = 8;
+            this.btnright.UseVisualStyleBackColor = true;
+            // 
             // btnDown
             // 
             this.btnDown.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -126,6 +130,16 @@
             this.btnDown.Size = new System.Drawing.Size(27, 27);
             this.btnDown.TabIndex = 7;
             this.btnDown.UseVisualStyleBackColor = true;
+            // 
+            // ctrlAudio
+            // 
+            this.ctrlAudio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ctrlAudio.Controls.Add(this.btnStop);
+            this.ctrlAudio.Controls.Add(this.btnStart);
+            this.ctrlAudio.Location = new System.Drawing.Point(19, 246);
+            this.ctrlAudio.Name = "ctrlAudio";
+            this.ctrlAudio.Size = new System.Drawing.Size(353, 74);
+            this.ctrlAudio.TabIndex = 7;
             // 
             // lblVideo
             // 
@@ -145,14 +159,26 @@
             this.lblAudio.TabIndex = 12;
             this.lblAudio.Text = "Audio en linea";
             // 
-            // videoSourcePlayer1
+            // btnStart
             // 
-            this.videoSourcePlayer1.Location = new System.Drawing.Point(8, 5);
-            this.videoSourcePlayer1.Name = "videoSourcePlayer1";
-            this.videoSourcePlayer1.Size = new System.Drawing.Size(232, 195);
-            this.videoSourcePlayer1.TabIndex = 11;
-            this.videoSourcePlayer1.Text = "videoSourcePlayer1";
-            this.videoSourcePlayer1.VideoSource = null;
+            this.btnStart.Location = new System.Drawing.Point(18, 25);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Enabled = false;
+            this.btnStop.Location = new System.Drawing.Point(100, 25);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(75, 23);
+            this.btnStop.TabIndex = 1;
+            this.btnStop.Text = "Stop";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // PanelDetalles
             // 
@@ -168,6 +194,7 @@
             this.Name = "PanelDetalles";
             this.Text = "Sucursal en linea";
             this.ctrlVideo.ResumeLayout(false);
+            this.ctrlAudio.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +213,7 @@
         private System.Windows.Forms.Label lblVideo;
         private System.Windows.Forms.Label lblAudio;
         private AForge.Controls.VideoSourcePlayer videoSourcePlayer1;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStop;
     }
 }

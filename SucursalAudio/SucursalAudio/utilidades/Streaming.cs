@@ -68,6 +68,7 @@ namespace SucursalAudio.utilidades
         {
             try
             {
+                Console.WriteLine("enviando...");
                 //Compress data
                 byte[] encodedData = null;
                 encodedData = G711.Encode_uLaw(buffer, 0, buffer.Length);

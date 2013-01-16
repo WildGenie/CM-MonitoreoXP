@@ -1,33 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
-using AdminAudioVideo.Properties;
-using AdminAudioVideo.componentes;
-using Oracle.DataAccess.Client;
+using AdminAudioVideo.CapaAccesoDatos;
+using AdminAudioVideo.Componentes;
 
 namespace AdminAudioVideo.CapaPresentacion
 {
     public partial class Principal : Form
     {
-        private readonly config _config = new config();
         private int _col, _row;
-        private ArregloControl[] _arregloControl;
+        private ArregloControl[] _arregloControlVilla, _arregloControlCoatza;
 
         public Principal()
         {
             InitializeComponent();
-            CrearConexion();
-        }
-
-        private void CrearConexion()
-        {
-            try
-            {
-                OracleConnection conec = new OracleConnection(_config.connOracle);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+            //CrearConexion();
         }
 
         private void mnuItemSalir_Click(object sender, EventArgs e)
@@ -35,36 +22,46 @@ namespace AdminAudioVideo.CapaPresentacion
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PanelDetalles pnlDetalles = new PanelDetalles("jaja");
-            pnlDetalles.Show();
-        }
-
         private void Principal_Load(object sender, EventArgs e)
         {
-            _arregloControl = new ArregloControl[11];
+            MetodosDatos metodos = new MetodosDatos();
+            
+            List<Sucursal> listadoVilla = metodos.ObtenerSucursales("77");
+            _arregloControlVilla = new ArregloControl[listadoVilla.Count];
 
-            for (int i = 0; i < _arregloControl.Length; i++)
+            for (int i = 0; i < _arregloControlVilla.Length; i++)
             {
-                _arregloControl[i] = new ArregloControl();
+                _arregloControlVilla[i] = new ArregloControl();
                 //TODO crear un Builder para la creacion de multiples componentes
-                _arregloControl[i].CrearComponente(spCont, _col, _row, i);
-                _arregloControl[i]._status = i%2==0 ? "activo" : "inactivo";
+                _arregloControlVilla[i].CrearComponente(spCont.Panel1, _col, _row, i, listadoVilla[i]);
                 _col++;
-                if (_col == 7)
+                if (_col == 9)
                 {
                     _col = 0;
                     _row++;
                 }
             }
 
-            foreach (Control control in spCont.Panel1.Controls)
+            _col = 0;
+            _row = 0;
+
+            List<Sucursal> listadoCoatza = metodos.ObtenerSucursales("78");
+            _arregloControlCoatza = new ArregloControl[listadoCoatza.Count];
+
+            for (int i = 0; i < _arregloControlCoatza.Length; i++)
             {
-                if(control is Button)
-                    Console.WriteLine(control.Tag);
-                
+                _arregloControlCoatza[i] = new ArregloControl();
+                //TODO crear un Builder para la creacion de multiples componentes
+                _arregloControlCoatza[i].CrearComponente(spCont.Panel2, _col, _row, i, listadoCoatza[i]);
+                _col++;
+                if (_col == 9)
+                {
+                    _col = 0;
+                    _row++;
+                }
             }
+
+            
         }
     }
 }

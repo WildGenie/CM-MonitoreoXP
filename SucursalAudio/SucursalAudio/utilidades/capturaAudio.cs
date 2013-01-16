@@ -122,7 +122,7 @@ namespace SucursalAudio.utilidades
                         DateTime fecha = DateTime.Now;
                         string nuevoNombre = "AUD_" + fecha.Day + fecha.Month + fecha.Year +
                                              "_" + fecha.Hour + fecha.Minute + fecha.Second;
-                        ftpAudio.enviaFtp(tempFile, nuevoNombre);
+                      //  ftpAudio.enviaFtp(tempFile, nuevoNombre);
 
                         //se crea un nuevo archivo de audio
                         tempFile = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".wav");

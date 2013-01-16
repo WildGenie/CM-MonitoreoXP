@@ -13,7 +13,7 @@ namespace SucursalAudio
 
         static void Main()
         {
-            #if(!DEBUG)
+            #if(DEBUG)
                 //If the mode is in debugging
                 //create a new service instance
                 Servicio myService = new Servicio();
